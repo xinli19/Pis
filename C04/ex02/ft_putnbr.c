@@ -6,13 +6,35 @@
 /*   By: xili <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:23:29 by xili              #+#    #+#             */
-/*   Updated: 2023/07/11 18:27:03 by xili             ###   ########.fr       */
+/*   Updated: 2023/07/11 19:44:02 by xili             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
 void	ft_putnbr(int nb)
 {
-	
-:wq
+	char narr[12];
+	int	i;
+	int	tempn;
 
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = -nb;
+	}
+	i = 0;
+	while (nb > 0)
+	{	
+		tempn = nb % 10;
+		narr[i] = tempn - '0';
+		i++;
+	}
+	narr[i] = nb - '0';
+	while (i > 0)
+	{	
+		i--;
+		write (1, narr[i],1);
+	}
+}
+
+	

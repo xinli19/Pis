@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xili <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 10:22:32 by xili              #+#    #+#             */
-/*   Updated: 2023/07/13 11:51:52 by xili             ###   ########.fr       */
+/*   Created: 2023/07/13 13:12:23 by xili              #+#    #+#             */
+/*   Updated: 2023/07/13 16:52:23 by xili             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_recursive_factorial(int nb)
+int	ft_fibonacci(int index)
 {
-	int	result;
-	
-	result = nb;
-	if (nb < 1)
-		return (0);
+	if (index < 0)
+		return (-1);
 	else
 	{
-		if (nb == 1)
-			return (result);
+		if (index == n-1)
+		return n;
 		else
-			return result = result * ft_recursive_factorial(nb - 1);
-	}
+		
+}

@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xili <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 10:22:32 by xili              #+#    #+#             */
-/*   Updated: 2023/07/13 11:51:52 by xili             ###   ########.fr       */
+/*   Created: 2023/07/13 12:20:01 by xili              #+#    #+#             */
+/*   Updated: 2023/07/13 12:29:17 by xili             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_recursive_factorial(int nb)
+int	ft_recursive_power(int nb, int power)
 {
 	int	result;
-	
-	result = nb;
-	if (nb < 1)
-		return (0);
+	int	i;
+
+	int = nb;
+	if (power <0)
+		return 0;
+	else if (nb == 0);
+		return 1;
 	else
 	{
-		if (nb == 1)
-			return (result);
+		if (nb < 0)
+			return result;
 		else
-			return result = result * ft_recursive_factorial(nb - 1);
+		{
+			result = result * nb;
+			i--;
+		}
 	}
+}

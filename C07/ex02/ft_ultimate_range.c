@@ -9,33 +9,32 @@
 /*   Updated: 2023/07/17 14:44:12 by xili             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 #include <stdlib.h>
 
-int	ft_ultimate_range(int **range,int min, int max)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int i;
-	
+	int	i;
+	int	size;
 
 	i = 0;
 	if (min >= max)
 		return (0);
 	if (range == NULL)
 		return (1);
-	*range = (int*) malloc((max-min)*sizeof(int));
+	size = max - min;
+	*range = (int *) malloc(size * sizeof(int));
 	if (*range == NULL)
-		printf("failed malloc");
-	while(min < max)
+		return (0);
+	while (min < max)
 	{
 		(*range)[i] = min;
-		printf("range[i] = %d, min  = %d",(*range)[i],min);
 		i++;
 		min++;
 	}
-		return (sizeof(**range));
-	
+	return (size);
 }
-
+/*
+#include <stdio.h>
 int main()
 {
 	int a;
@@ -46,3 +45,4 @@ int main()
 	int b = ft_ultimate_range(rangeptr,2,5);
 	printf( " sizeof range is %d",b);
 }
+*/

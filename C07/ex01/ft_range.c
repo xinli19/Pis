@@ -10,32 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-#include <limits.h>
-#include <stdio.h>
+
 int	*ft_range(int min, int max)
 {
-
 	int	*range;
-	int	 i;
+	int	i;
 
 	i = 0;
 	if (min >= max)
 		return (NULL);
-	range = (int*) malloc((max - min)*sizeof(int));
+	range = (int *) malloc((max - min) * sizeof (int));
 	if (range == NULL)
-		printf("false initialization");
+		return (NULL);
 	while (min < max)
 	{
 		range[i] = min;
 		i++;
-		min++;	
+		min++;
 	}
-	return (&range[0]);
+	return (range);
 }
+/*
+#include <stdio.h>
 int main()
 {
 	int *result= ft_range(0,10);
 	printf("result[ min] is %d, result [max] is %d",result[0], result[(9)]);
 	return (0);
 }
-
+*/
